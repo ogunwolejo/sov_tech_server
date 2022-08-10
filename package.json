@@ -1,0 +1,21 @@
+{
+  "name": "sov_tech_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts"
+  },
+  "author": "ogunwole joshua",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.6.1",
+    "apollo-server": "^3.10.0",
+    "graphql": "^16.5.0"
+  }
+}
