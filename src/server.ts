@@ -3,17 +3,17 @@ import typeDefs from './schema/schema';
 import resolvers from "./Resolvers/resolvers";
 import StarsWarsPeopleAPI from './data.source/stars.wars';
 
+
 const server = new ApolloServer({
     cache: 'bounded',
     csrfPrevention:true,
     typeDefs,
     resolvers,
     cors: {
-        origin:process.env.ORGIN_URL,
+        origin:['https://client-app-1.vercel.app/','http://localhost:3000/'],
         credentials: true,
         methods:'*',
-        preflightContinue:true,
-
+        allowedHeaders: '*'
     },
     dataSources: () => {
      return {
