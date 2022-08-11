@@ -8,6 +8,11 @@ const server = new ApolloServer({
     csrfPrevention:false,
     typeDefs,
     resolvers,
+    cors: {
+        origin: process.env.ORGIN_URL,
+        credentials: true,
+        methods:'*'
+    },
     dataSources: () => {
      return {
          STAR_WARS_API: new StarsWarsPeopleAPI()
