@@ -13,7 +13,7 @@ const server = new ApolloServer({
         origin:['https://client-app-1.vercel.app/','http://localhost:3000/'],
         credentials: false,
         methods:'*',
-        allowedHeaders: '*'
+        preflightContinue:true
     },
     dataSources: () => {
      return {
