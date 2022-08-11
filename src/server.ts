@@ -9,6 +9,7 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     cors: {
+        origin:true,
         credentials: true,
         methods:'*'
     },
