@@ -9,14 +9,7 @@ const server = new ApolloServer({
     csrfPrevention:true,
     typeDefs,
     resolvers,
-    cors: {
-        origin:["https://client-app-1.vercel.app/", "http://localhost:3000/"],
-        credentials: true,
-        preflightContinue:false,
-        allowedHeaders: '*',
-        methods:'*',
-        exposedHeaders: '*'
-    },
+
     dataSources: () => {
      return {
          STAR_WARS_API: new StarsWarsPeopleAPI()
