@@ -9,7 +9,6 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     cors: {
-        origin: process.env.ORGIN_URL,
         credentials: true,
         methods:'*'
     },
