@@ -6,7 +6,6 @@ import StarsWarsPeopleAPI from './data.source/stars.wars';
 
 const server = new ApolloServer({
     cache: 'bounded',
-    csrfPrevention:true,
     typeDefs,
     resolvers,
 
