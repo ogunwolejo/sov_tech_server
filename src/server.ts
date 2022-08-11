@@ -10,10 +10,11 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     cors: {
-        origin:'*',
-        credentials: false,
+        origin:["https://client-app-1.vercel.app/", "http://localhost:3000/"],
+        credentials: true,
         preflightContinue:false,
         allowedHeaders: '*',
+        methods:'*',
         exposedHeaders: '*'
     },
     dataSources: () => {
