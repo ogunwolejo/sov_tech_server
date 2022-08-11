@@ -9,9 +9,10 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     cors: {
-        origin:true,
+        origin:'*',
         credentials: true,
-        methods:'*'
+        methods:'*',
+        preflightContinue:false,
     },
     dataSources: () => {
      return {
