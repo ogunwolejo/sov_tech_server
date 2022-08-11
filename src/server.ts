@@ -12,9 +12,9 @@ const server = new ApolloServer({
     cors: {
         origin:'*',
         credentials: false,
-        methods:'*',
-        preflightContinue:true,
-
+        preflightContinue:false,
+        allowedHeaders: '*',
+        exposedHeaders: '*'
     },
     dataSources: () => {
      return {
