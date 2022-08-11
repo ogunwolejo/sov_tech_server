@@ -7,8 +7,12 @@ class StarsWarsPeopleAPI extends RESTDataSource {
         this.baseURL = 'https://swapi.dev/api/';
     }
 
-    async getPeople() {
-        const data = await this.get('people/?page=1');
+    async getPeople(search:string) {
+        let page:string = '1';
+        if(search) {
+            page = search;
+        }
+        const data = await this.get(`people/?page=${page}`);
         if(data) {
             const {results} = data;
             return results;

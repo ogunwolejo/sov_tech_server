@@ -2,8 +2,8 @@ import {gql} from 'apollo-server';
 
 const typeDefs = gql`
     type Query {
-        People: [People!]!
-        Person(search:String!): [People]
+        People(search:String): [People!]!
+        Person(search:String!): [People]!
     }
     
     
@@ -13,6 +13,7 @@ const typeDefs = gql`
         mass:String!
         gender:String!
         homeworld:String!
+        
     }
     
     type Person {
@@ -26,6 +27,7 @@ const typeDefs = gql`
     input PersonInput {
         name:String!
     }
+    
 `;
 
 
