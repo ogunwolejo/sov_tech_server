@@ -12,7 +12,7 @@ const server = new ApolloServer({
         origin:process.env.ORGIN_URL,
         credentials: true,
         methods:'*',
-        preflightContinue:false,
+        preflightContinue:true,
 
     },
     dataSources: () => {
