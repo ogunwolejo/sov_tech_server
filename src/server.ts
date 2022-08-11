@@ -9,12 +9,6 @@ const server = new ApolloServer({
     csrfPrevention:true,
     typeDefs,
     resolvers,
-    cors: {
-        origin:'*',
-        credentials: false,
-        methods:'*',
-        preflightContinue:false
-    },
     dataSources: () => {
      return {
          STAR_WARS_API: new StarsWarsPeopleAPI()
