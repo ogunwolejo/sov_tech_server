@@ -5,14 +5,15 @@ import StarsWarsPeopleAPI from './data.source/stars.wars';
 
 const server = new ApolloServer({
     cache: 'bounded',
-    csrfPrevention:false,
+    csrfPrevention:true,
     typeDefs,
     resolvers,
     cors: {
-        origin:'*',
+        origin:process.env.ORGIN_URL,
         credentials: true,
         methods:'*',
         preflightContinue:false,
+
     },
     dataSources: () => {
      return {
